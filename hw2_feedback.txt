@@ -1,0 +1,30 @@
+Use HTML5 structural elements (nav, header, footer)
+ - Good! Footer contents are in footer element.
+Use a CSS Reset file in addition to your style.css file to style the page
+ - Good use of reset. See additional comments below.
+Use IDs and Classes to to select and style elements on the page
+ - Good use of classes to select and style content. Unique elements should be assigned IDs. Classes should be used for reusable styles.
+Follow naming conventions, maintain consistency across .html and .css files and use best practices for naming IDs and Classes
+ - Good!
+Indent nested elements to increase your code's readability
+ - Good! I see one place where a <ul> is indented underneath a <p> tag unnecessarily, but other that everything looks good!
+Use CSS display and float to get the layout correct
+
+Additional Comments:
+ 
+ - Good start and good use of HTML elements, but some stylistic issues are causing problems.
+
+ - The images were not included with your solution. Make sure to include all files used by your website.
+
+ - You're reseting the CSS, which is good, but you should keep that, and any other 3rd party CSS, in separate files. That's going to help you differentiate between what you've written and what you've pulled from other sources. Also, if it's in a seperate file you can easily switch between a reset and a normalize technique just by swapping files.
+
+ - Margins should be used to add space between elements
+
+ - Corners of buttons (and other elements) can be rounded using the border-radius property.
+
+ - Unerlines can be removed from links (as in the buttons) by setting the text-decoration property to 'none'.
+
+ - The quote isn't overlayed over the background image because the image is displayed using an <img> tag, instead of being used as the 'background' for a <div> element. This is also causing the quote text to not show at all, since it's white text on a white background.
+
+ - Your CSS selectors are nested backwards. Instead of 'a.signup' it should be '.signup a' to select all anchor tags within the signup element.
+

@@ -1,0 +1,63 @@
+Use floats or inline-block in your CSS to achieve a two-column layout
+  -Good!
+
+Use the correct Open Sans Google Font typeface to style the text denoted in the design file and according to the JPEG provided
+  -see comments
+
+Use proper filename conventions (lowercase, .html)
+  -Good!
+
+Use an external CSS stylesheet to style your page
+  -Good!
+
+Make sure that all images are no wider than their containers
+  -Good!
+
+
+Additional Comments:
+
+Your HTML looks good. You're definitely getting the hang of how to structure your elements. And nice job using the percentage widths on the columns, so that they resize with the browser.
+
+Be careful when you're nesting tags that the inner tag closes first. So here:
+<li><a href="https://www.google.com">Success Stories</li></a>
+see how you have 
+<li>  <a>       and then       </li>  </a>
+it should be
+<li>  <a>       and then        </a>  </li>
+with the <a> closing first, since it's the inner tag.
+
+Also, the <li>s should be surrounded with a <ul> (for unordered list), or <ol> (for ordered list). They still display without it, but it's a semantic thing, like this list starts here and ends here.
+<ul>
+    <li><a href="https://www.google.com">Success Stories</li></a>
+    <li><a href="https://www.google.com">Stats</li></a>
+    <li><a href="https://www.google.com">How tos</li></a>
+    <li><a href="https://www.google.com">Best of</li></a>
+    <li><a href="https://www.google.com">Business Trips</li></a>
+</ul>
+
+So for your CSS, the styles you have look good. There are 3 things you could add that would make a big difference on the layout:
+
+1) In the HTML on line 7, you imported the Google Fonts code correctly, but you never implemented it in your CSS, so it's not showing up. That one's easy. Just add:
+body {
+  font-family: "Open Sans";
+}
+
+2) All your elements are very tight on the edges. There isn't any negative space like on the mock. This one is also easy. You can just add some padding to that left column:
+.column {
+  padding: 5%;
+}
+
+3) Notice how your footer is squished up in the right column? You applied the clearfix, but it isn't working. The reason is that you have it on the wrong divs. You have it on the footer, which is the part that you want to be fixed. But it actually goes on the part that is causing the problems (aka the parts being floated, aka the columns). You want the footer under both the columns, so the best way to do this is to put a div around both of the columns:
+<div id="maincontent" class="clearfix">
+  <div class="column">
+    ...
+  </div>
+  <div class="rightcolumn">
+    ...
+  </div>
+</div>
+
+So those columns are the ones causing the problems, so that big div gets the clearfix. And now, the footer should be where it belongs at the bottom. Huzzah!
+
+
+Overall, you have a few things to work on, but definitely making progress. And I like that you inserted your own ad. Very brand-appropriate! Let me know if you have any questions about this stuff.

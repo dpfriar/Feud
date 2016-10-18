@@ -1,0 +1,28 @@
+Call $.val() on inputs to get the string value of your user's input
+  - Good!
+Store user input in var city
+  - Good!
+Use $.on("submit") or $.click to figure out when the user clicks the "submit" button
+  - Good!
+Create if / else if / else conditionals to control the flow of your application
+  - Good!
+Prevent a form submission using the event.preventDefault() function
+  - Good!
+Use the $.ready() handler to delay your code from executing until all DOM assets have been loaded
+  - Good!
+Use the || operator in your conditionals to allow for multiple string values to execute if/else if statement code
+  - Good!
+
+
+
+Additional Comments:
+
+Your JavaScript looks great! Everything is working. Nice!
+
+Be careful about keeping your file structure when you upload stuff to GitHub. In your HTML and CSS, you linked everything like homework.css was in the css folder. But that file wasn't in the css folder, so your code didn't work at first. I imagine it was working on your computer, and you just accidentally moved stuff around when you put in on GitHub. It's an easy mistake to make. Just make sure to keep everything in the correct folders when moving it.
+
+The only other little thing is that in your JavaScript, you have
+  $("#city-type").val("");
+in line 10, and then again in the conditionals. It's not doing any harm having it in multiple times, but you don't need it. Just having it once on line 10 does the same thing. (And nice job resetting the text like that!)
+
+Overall, your JavaScript looks good! Let me know if you have any questions.

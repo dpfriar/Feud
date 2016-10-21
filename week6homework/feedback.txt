@@ -1,0 +1,24 @@
+Create an array with the following values: "NYC", "SF", "LA", "ATX", "SYD"; use the array to add values to the <select> menu by using a for loop in JavaScript (don't update the HTML to do this!)
+ - Good!
+When the user changes the input of the drop-down, update the background image based on what they selected
+ - You're close here, but using .click() instead of .change() is causing the background to not change until the user clicks the 'select' control a second time.
+Use $.append() in your iteration on the drop-down menu
+ - Good!
+Use the $.attr() function to update html classes
+ - You can use .attr("class") to set a class, but .addClass() & .removeClass() work just as well
+Get the value of user input using $.val()
+ - Good!
+Use the $.change event handler to capture user actions
+ - Like I mentioned above, using .change() instead of .click() would fix the functionality problem
+Use if/else if/else conditionals to control the flow of your application
+ - Good!
+Display your pseudocode as Javascript comments
+ - Good!
+
+Additional Comments:
+
+- Good job. Your logic to to update the classes looks good and is appropriately nested in an event handler.
+
+- The problem with using .click() in this case is that the event fires as soon as the user clicks on the control, before they've selected an option. This can be fixed by using the .change() event, which doesn't fire until the user actually picks a value.
+
+- Try to keep your javascript properly idented. This makes it much easier to spot missing symbols and also helps to keep conditional blocks organized.

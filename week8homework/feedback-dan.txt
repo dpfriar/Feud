@@ -1,0 +1,37 @@
+Use media queries at a 768px breakpoint
+  -Good!
+
+As a user changes the size of a browser window:
+Content remains in appropriate divs
+  -Good!
+Content remains visible to the user
+  -Good!
+Fonts change size appropriately
+  -Good!
+Margins and padding change size appropriately
+  -Good!
+Content does not overlap
+  -Good!
+In the blog section, the two-column layout changes to a single-column layout when appropriate
+  -Good!
+
+
+Additional Comments:
+
+I've never really used the CSS columns property before. That's an interesting way to do it. The one thing is that since the width is still being defined by pixels, the layout is not very flexible.
+  .container {
+    columns: 2 350px;
+  }
+Another way to adjust the columns that would be more flexible is to change the width of the columns into a percentage. If you look further up in the CSS, both the #posts and #sidebar columns have fixed widths. If you change those to 100% in your media query, the layout will flow much better on the smaller size:
+#posts, #sidebar {
+    width: 100%;
+  }
+
+Another thing that is causing some issues is the fixed width that is set on the main section (and is causing the text to stick off the page). You can give that a new width as well in the media query:
+  .container {
+    width: 100%;
+  } 
+
+Doing those 2 things will help the content fit the space much better on the one column layout.
+
+I saw you posted your final project. It's looking good so far. That's awesome that you got the photo slider working!
